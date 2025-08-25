@@ -4,84 +4,44 @@ SPDX-FileCopyrightText: 2025 Chen Linxuan <me@black-desk.cn>
 SPDX-License-Identifier: MIT
 -->
 
-<!-- TODO: 更新项目名称 -->
-
-# 模版
+# Workspace
 
 [![checks][badge-shields-io-checks]][actions]
 [![commit activity][badge-shields-io-commit-activity]][commits]
 [![contributors][badge-shields-io-contributors]][contributors]
-[![release date][badge-shields-io-release-date]][releases]
-![commits since release][badge-shields-io-commits-since-release]
-[![codecov][badge-shields-io-codecov]][codecov]
-
-<!-- TODO: 更新项目链接 -->
 
 [badge-shields-io-checks]:
-  https://img.shields.io/github/check-runs/black-desk/template/master
+  https://img.shields.io/github/check-runs/black-desk/workspace/master
 
-<!-- TODO: 更新项目链接 -->
-
-[actions]: https://github.com/black-desk/template/actions
-
-<!-- TODO: 更新项目链接 -->
+[actions]: https://github.com/black-desk/workspace/actions
 
 [badge-shields-io-commit-activity]:
-  https://img.shields.io/github/commit-activity/w/black-desk/template/master
+  https://img.shields.io/github/commit-activity/w/black-desk/workspace/master
 
-<!-- TODO: 更新项目链接 -->
-
-[commits]: https://github.com/black-desk/template/commits/master
-
-<!-- TODO: 更新项目链接 -->
+[commits]: https://github.com/black-desk/workspace/commits/master
 
 [badge-shields-io-contributors]:
-  https://img.shields.io/github/contributors/black-desk/template
+  https://img.shields.io/github/contributors/black-desk/workspace
 
-<!-- TODO: 更新项目链接 -->
-
-[contributors]: https://github.com/black-desk/template/graphs/contributors
-
-<!-- TODO: 更新项目链接 -->
-
-[badge-shields-io-release-date]:
-  https://img.shields.io/github/release-date/black-desk/template
-
-<!-- TODO: 更新项目链接 -->
-
-[releases]: https://github.com/black-desk/template/releases
-
-<!-- TODO: 更新项目链接 -->
-
-[badge-shields-io-commits-since-release]:
-  https://img.shields.io/github/commits-since/black-desk/template/latest
-
-<!-- TODO: 更新项目链接 -->
-
-[badge-shields-io-codecov]:
-  https://codecov.io/github/black-desk/template/graph/badge.svg?token=6TSVGQ4L9X
-[codecov]: https://codecov.io/github/black-desk/template
+[contributors]: https://github.com/black-desk/workspace/graphs/contributors
 
 [en](README.md) | zh_CN
 
-<!-- TODO: 添加项目简介 -->
+我的工作目录。
 
 ## 使用
 
-<!-- TODO: 添加项目使用说明 -->
-
-1. 使用gh，从模版创建仓库：
+1. 使用gh克隆库：
 
    ```bash
-   gh repo create --public --template black-desk/template
+   gh repo clone black-desk/workspace
    ```
 
-2. 编辑项目文件，填充内容后移除所有的`TODO`。
-
-3. 运行检查脚本，确定所有`TODO`均已被移除：
+2. 使用`scripts/setup.sh`拉取某个项目：
 
    ```bash
-   ./scripts/ls-todo.sh
+   ./scripts/setup.sh -D
+   ./scripts/setup.sh repositoires/linux
    ```
 
 ## 许可证

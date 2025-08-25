@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2025 Chen Linxuan <me@black-desk.cn>
+#
+# SPDX-License-Identifier: MIT
+
+repositories:
+  linux:
+    remotes:
+      deepin: https://github.com/deepin-community/kernel.git
+      next-history: https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next-history.git
+      next: https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git
+      openEuler: https://gitee.com/openeuler/kernel.git
+      origin: https://github.com/black-desk/linux.git
+      stable: https://github.com/gregkh/linux.git
+    worktrees:
+      OLK-5.10: openEuler/OLK-5.10
+      OLK-6.6: openEuler/OLK-6.6
+      linux-rolling-stable: stable/linux-rolling-stable
+  lustre:
+    remotes:
+      origin: https://github.com/black-desk/lustre.git
+      upstream: https://review.whamcloud.com/fs/lustre-release.git
+    worktrees:
+      b2_15: upstream/b2_15
+      b2_16: upstream/b2_16

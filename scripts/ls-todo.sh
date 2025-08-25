@@ -19,6 +19,9 @@ set -o pipefail
 # and current script file is sourced by `source` or `.`
 CURRENT_SOURCE_FILE_PATH="${BASH_SOURCE[0]:-$0}"
 CURRENT_SOURCE_FILE_NAME="$(basename -- "$CURRENT_SOURCE_FILE_PATH")"
+CURRENT_SOURCE_DIR_NAME="$(dirname -- "$CURRENT_SOURCE_FILE_PATH")"
+
+source "$CURRENT_SOURCE_DIR_NAME/include.sh"
 
 # shellcheck disable=SC2016
 USAGE="$CURRENT_SOURCE_FILE_NAME
@@ -33,18 +36,6 @@ Usage:
 Options:
   -h   Show this screen."
 
-# This function log messages to stderr works like printf
-# with a prefix of the current script name.
-# Arguments:
-#   $1 - The format string.
-#   $@ - Arguments to the format string, just like printf.
-function log() {
-	local format="$1"
-	shift
-	# shellcheck disable=SC2059
-	printf "$CURRENT_SOURCE_FILE_NAME: $format\n" "$@" >&2 || true
-}
-
 function main() {
 	while getopts ':h' option; do
 		case "$option" in
@@ -53,7 +44,7 @@ function main() {
 			exit
 			;;
 		\?)
-			log "[ERROR] Unknown option: -%s" "$OPTARG"
+			error "Unknown option: -%s" "$OPTARG"
 			exit 1
 			;;
 		esac
