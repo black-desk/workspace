@@ -3,6 +3,10 @@
 # SPDX-License-Identifier: MIT
 
 repositories:
+  llvm-project:
+    remotes:
+      origin: https://github.com/black-desk/llvm-project.git
+      upstream: https://github.com/llvm/llvm-project.git
   linux:
     remotes:
       deepin: https://github.com/deepin-community/kernel.git
