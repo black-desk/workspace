@@ -11,6 +11,7 @@ repositories:
       openEuler: https://gitee.com/openeuler/kernel.git
       origin: https://github.com/black-desk/linux.git
       stable: https://github.com/gregkh/linux.git
+      DEV: ssh://DEV:/~/Documents/workspace/repositories/linux.git
     worktrees:
       OLK-5.10: openEuler/OLK-5.10
       OLK-6.6: openEuler/OLK-6.6
