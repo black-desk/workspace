@@ -111,7 +111,8 @@ function setup_project() {
 		fi
 
 		info "Add worktree %s for %s" "$worktree" "$project"
-		git -C "$repo_dir" worktree add --track -b "$worktree" "$repo_dir-worktrees/$worktree" "$remote_branch"
+		git -C "$repo_dir" worktree add --track -b "$worktree" "$repo_dir-worktrees/$worktree" "$remote_branch" ||
+			error "Failed to add worktree %s" "$worktree"
 	done <<<"$worktrees"
 }
 
