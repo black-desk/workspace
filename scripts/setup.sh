@@ -71,9 +71,18 @@ function setup_project() {
 	remotes=$("$YQ" -e ".repositories.$project.remotes | keys | .[]" workspace.yaml)
 	while IFS= read -r remote; do
 		local remote_url
+		local new
+		new=
 		remote_url="$("$YQ" -e ".repositories.$project.remotes.$remote" workspace.yaml)"
 		if git -C "$repo_dir" remote add "$remote" "$remote_url" 2>/dev/null; then
 			info "Add remote %s for %s" "$remote" "$project"
+			new=1
+		fi
+
+		info "Fetch %s" "$remote"
+		git -C "$repo_dir" fetch "$remote" || true
+
+		if [[ -z new ]]; then
 			continue
 		fi
 
@@ -87,8 +96,6 @@ function setup_project() {
 		warn "Except: %s" "$remote_url"
 		warn "Actual: %s" "$actual_remote_url"
 	done <<<"$remotes"
-
-	git -C "$repo_dir" fetch --all
 
 	local worktrees
 	if ! "$YQ" -e ".repositories.$project.worktrees" workspace.yaml &>/dev/null; then
