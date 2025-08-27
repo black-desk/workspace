@@ -19,6 +19,8 @@ repositories:
     remotes:
       origin: https://github.com/black-desk/lustre.git
       upstream: https://review.whamcloud.com/fs/lustre-release.git
+      CU-gitea: git@git.culinux.net:Storage/hcufs.git
     worktrees:
       b2_15: upstream/b2_15
       b2_16: upstream/b2_16
+      cuos: CU-gitea/master
