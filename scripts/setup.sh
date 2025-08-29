@@ -51,8 +51,10 @@ function setup_directories() {
 
 function setup_project() {
 	local project
-	project="${1#./}"
-	project="${1#repositories/}"
+	project="$1"
+	project="${project#./}"
+	project="${project#repositories/}"
+	project="${project%/}"
 
 	info "Setup project %s" "$project"
 
