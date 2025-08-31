@@ -36,3 +36,6 @@ repositories:
   template:
     remotes:
       origin: https://github.com/black-desk/template.git
+  kernel-codebrowser:
+    remotes:
+      origin: https://github.com/black-desk/kernel-codebrowser.git
