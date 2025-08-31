@@ -33,3 +33,6 @@ repositories:
       b2_15: upstream/b2_15
       b2_16: upstream/b2_16
       cuos: CU-gitea/master
+  template:
+    remotes:
+      origin: https://github.com/black-desk/template.git
