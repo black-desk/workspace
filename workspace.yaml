@@ -39,3 +39,13 @@ repositories:
   kernel-codebrowser:
     remotes:
       origin: https://github.com/black-desk/kernel-codebrowser.git
+  e2fsprogs/:
+    remotes:
+      origin: https://review.whamcloud.com/tools/e2fsprogs
+    worktrees:
+      e2fsprogs: origin/master
+  git-backport/:
+    remotes:
+      origin: https://github.com/black-desk/git-backport.git
+    worktrees:
+      git-backport: origin/master
