@@ -49,3 +49,7 @@ repositories:
       origin: https://github.com/black-desk/git-backport.git
     worktrees:
       git-backport: origin/master
+  prefix:
+    remotes:
+      origin: https://github.com/black-desk/prefix.git
+      upstream: https://github.com/gentoo/prefix.git
