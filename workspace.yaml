@@ -42,14 +42,13 @@ repositories:
   e2fsprogs/:
     remotes:
       origin: https://review.whamcloud.com/tools/e2fsprogs
-    worktrees:
-      e2fsprogs: origin/master
   git-backport/:
     remotes:
       origin: https://github.com/black-desk/git-backport.git
-    worktrees:
-      git-backport: origin/master
   prefix:
     remotes:
       origin: https://github.com/black-desk/prefix.git
       upstream: https://github.com/gentoo/prefix.git
+  memo/:
+    remotes:
+      origin: https://github.com/black-desk/memo.git
