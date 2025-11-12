@@ -36,9 +36,10 @@ function detect_platform() {
     local os
     local arch
 
-    case "$(uname -s)" in
+    case "$(uname -o)" in
         Linux*)     os=linux ;;
         Darwin*)    os=darwin ;;
+        Msys*)      os=windows ;;
         *)
             error "Not supported OS: %s" "$(uname -s)"
             return 1
@@ -72,9 +73,16 @@ function install_yq() {
 	local binary
 	binary="yq_$(detect_platform)"
 
-	cd "$TEMP_DIR"
-	wget "https://github.com/mikefarah/yq/releases/latest/download/${binary}.tar.gz" -O - | tar xz
-	mv "${binary}" "$TOOLS_DIR/yq"
+	if [[ ${binary} = *windows* ]]; then
+		cd "$TEMP_DIR"
+		wget "https://github.com/mikefarah/yq/releases/latest/download/${binary}.exe"
+		mv "${binary}" "$TOOLS_DIR/yq.exe"
+	else
+		cd "$TEMP_DIR"
+		wget "https://github.com/mikefarah/yq/releases/latest/download/${binary}.tar.gz" -O - | tar xz
+		mv "${binary}" "$TOOLS_DIR/yq"
+	fi
+
 	cd -
 
 	info "done"
