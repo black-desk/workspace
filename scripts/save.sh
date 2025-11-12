@@ -39,7 +39,8 @@ Options:
 function save_project() {
 	local project
 	project="${1#./}"
-	project="${1#repositories/}"
+	project="${project#repositories/}"
+	project="${project%/}"
 
 	local repo_dir
 	repo_dir="$(pwd)/repositories/$project"
