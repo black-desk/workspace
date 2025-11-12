@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Chen Linxuan <me@black-desk.cn>
 #
 # SPDX-License-Identifier: MIT
-
 repositories:
   external-module-template:
     remotes:
@@ -52,3 +51,6 @@ repositories:
   memo:
     remotes:
       origin: https://github.com/black-desk/memo.git
+  Typst-Documents:
+    remotes:
+      origin: https://github.com/black-desk/Typst-Documents
