@@ -53,3 +53,9 @@ repositories:
   Typst-Documents:
     remotes:
       origin: https://github.com/black-desk/Typst-Documents
+  cgtproxy:
+    remotes:
+      origin: https://github.com/black-desk/cgtproxy.git
+  clash-config:
+    remotes:
+      origin: https://github.com/black-desk/clash-config.git
