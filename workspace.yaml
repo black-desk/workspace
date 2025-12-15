@@ -16,6 +16,7 @@ repositories:
       next: https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git
       openEuler: https://gitee.com/openeuler/kernel.git
       origin: https://github.com/black-desk/linux.git
+      upstream: https://github.com/torvalds/linux.git
       stable: https://github.com/gregkh/linux.git
     worktrees:
       OLK-5.10: openEuler/OLK-5.10
