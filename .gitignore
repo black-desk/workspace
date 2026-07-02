@@ -3,10 +3,6 @@
 # SPDX-License-Identifier: MIT
 
 /.tools
-/tmp
+/mail
 /repositories
-/zephyr-project
-/rel4
-/sel4
-/A630
-/apt
+/tmp
